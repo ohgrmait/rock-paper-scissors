@@ -18,3 +18,10 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+  let userChoice = prompt('Enter either "rock", "paper" or "scissors":', "rock");
+  return userChoice;
+}
+
+console.log(getHumanChoice());
