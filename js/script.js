@@ -34,11 +34,11 @@ function playGame() {
 
   function declareWinner(humanScore, computerScore) {
     if (humanScore === computerScore) {
-      return "What a waste! The game's a tie!";
+      return "What a waste! The match has been tied!";
     } else if (humanScore > computerScore) {
-      return "Congratulations! You won the game!";
+      return "Congratulations! You have won the game!";
     } else if (computerScore > humanScore) {
-      return "Boohoo! Computer has outsmarted you!";
+      return "Boohoo! The Computer has outsmarted you!";
     }
   }
   
@@ -90,7 +90,7 @@ function playGame() {
   computerSelection = getComputerChoice();
   console.log(`Round 5: ${playRound(humanSelection, computerSelection)}`);
 
-  console.log(`${declareWinner(humanScore, computerScore)}`);
+  console.log(`Final: ${declareWinner(humanScore, computerScore)}`);
 }
 
 playGame();
