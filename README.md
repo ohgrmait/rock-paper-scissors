@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Rock Paper Scissors</h1>
 
-  A Console Based Game of Rock Paper Scissors ([live preview](https://ohgrmait.github.io/rock-paper-scissors/))
+  A Console Based Game of Rock Paper Scissors built using HTML and JS ([live preview](https://ohgrmait.github.io/rock-paper-scissors/))
 </div>
 
 ## About
@@ -21,7 +21,6 @@ This project shows a console based browser version of the grade school classic "
 ## Technologies
 - ***Git***
 - ***CLI***
-- ***CSS***
 - ***HTML***
 - ***GitHub***
 - ***JavaScript***
