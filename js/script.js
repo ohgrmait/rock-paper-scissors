@@ -17,36 +17,6 @@ function getComputerChoice() {
   }
 }
 
-function cleanHumanChoice(userChoice) {
-  const userChoiceLowerCased = userChoice.toLowerCase();
-  const firstLetterCapitalized = userChoiceLowerCased.charAt(0).toUpperCase();
-  return firstLetterCapitalized.concat(userChoiceLowerCased.slice(1));
-}
-
-function getHumanChoice() {
-  let userChoice = prompt("Enter 'Rock', 'Paper' or 'Scissors'");
-  return cleanHumanChoice(userChoice);
-}
-
-// function playGame() {
-//   let humanScore = 0;
-//   let computerScore = 0;
-
-//   function declareWinner(humanScore, computerScore) {
-//     if (humanScore === computerScore) {
-//       return "What a waste! The match has been tied!";
-//     } else if (humanScore > computerScore) {
-//       return "Congratulations! You have won the game!";
-//     } else if (computerScore > humanScore) {
-//       return "Boohoo! The Computer has outsmarted you!";
-//     }
-//   }
-
-//   console.log(`Final: ${declareWinner(humanScore, computerScore)}`);
-// }
-
-// playGame();
-
 let humanScore = 0;
 let computerScore = 0;
 
