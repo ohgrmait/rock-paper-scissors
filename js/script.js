@@ -80,11 +80,13 @@ function playRound(humanChoice, computerChoice) {
 
 const buttons = document.querySelectorAll(".btn");
 
+const result = document.querySelector(".result");
+
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     let humanSelection = button.textContent;
     let computerSelection = getComputerChoice();
 
-    console.log(playRound(humanSelection, computerSelection));
+    result.textContent = playRound(humanSelection, computerSelection);
   });
 });
