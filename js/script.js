@@ -82,11 +82,31 @@ const buttons = document.querySelectorAll(".btn");
 
 const result = document.querySelector(".result");
 
+const score = document.querySelector(".score");
+
+const winner = document.querySelector(".winner");
+
+let isGameOver = false;
+
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
+    if (isGameOver) {
+      return;
+    }
+
     let humanSelection = button.textContent;
     let computerSelection = getComputerChoice();
 
     result.textContent = playRound(humanSelection, computerSelection);
+
+    score.textContent = `Score: You: ${humanScore}, Computer: ${computerScore}`;
+
+    if (humanScore === 5) {
+      winner.textContent = `Congratulations! You won.`;
+      isGameOver = true;
+    } else if (computerScore === 5) {
+      winner.textContent = `Boohoo! Computer has won.`;
+      isGameOver = true;
+    }
   });
 });
