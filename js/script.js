@@ -56,13 +56,19 @@ const score = document.querySelector(".score");
 
 const winner = document.querySelector(".winner");
 
+const audio = document.querySelector("#audio");
+const winnerAudio = document.querySelector("#winner-audio");
+const loserAudio = document.querySelector("#loser-audio");
+
 let isGameOver = false;
 
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", () => {  
     if (isGameOver) {
       return;
     }
+
+    audio.play();
 
     let humanSelection = button.textContent;
     let computerSelection = getComputerChoice();
@@ -73,9 +79,11 @@ buttons.forEach((button) => {
 
     if (humanScore === 5) {
       winner.textContent = `Congratulations! You won.`;
+      winnerAudio.play();
       isGameOver = true;
     } else if (computerScore === 5) {
       winner.textContent = `Boohoo! Computer has won.`;
+      loserAudio.play();
       isGameOver = true;
     }
   });
