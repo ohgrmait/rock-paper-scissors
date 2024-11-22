@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
 
 html {
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  /* font-family: Roboto, sans-serif; */
+  font-family: "Oleo Script Swash Caps", "Chango", sans-serif;
 }
 
 *,
@@ -17,8 +18,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   background-color: hsla(180, 12%, 87%, 0.166);
+}
+
+.title,
+.winner {
+  color: red;
+  text-shadow: 1px 1px 2px red,
+    0 0 1em rgb(238, 238, 244),
+    0 0 0.2em rgb(249, 231, 237);
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 1000;
+}
+
+span,
+.result,
+.score {
+  color: rgb(87, 76, 76);
+  text-shadow: 1px 1px 2px rgb(28, 3, 3),
+    0 0 1em rgb(194, 194, 199),
+    0 0 0.2em rgb(230, 230, 239);
 }
 
 .main {
@@ -30,80 +53,88 @@ body {
 }
 
 .result,
-.score,
-.winner {
-  font-size: 24px;
-}
-
-.result,
 .score {
-  text-shadow: 1px 1px 2px rgb(28, 3, 3), 0 0 1em rgb(118, 118, 123), 0 0 0.2em rgb(177, 177, 185);
+  font-size: 50px;
 }
 
 .winner {
-  text-shadow: 1px 1px 2px red, 0 0 1em rgb(213, 213, 226), 0 0 0.2em rgb(7, 7, 9);
+  font-size: 55px;
 }
 
 .btn {
-  font-size: 24px;
+  font-size: 40px;
   border-radius: 50% / 50%;
-  color: white;
-  font-weight: 1000;
+  color: red;
+  text-shadow: 1px 1px 2px red,
+    0 0 1em rgb(238, 238, 244),
+    0 0 0.2em rgb(249, 231, 237);
+  font-family: "Oleo Script Swash Caps", sans-serif;
+  background-color: white;
 }
 
 #rock {
   padding: 40px 25px;
-  background-color: #375E97;
-  box-shadow: 2px 6px 5px #929292;
-  border: 4mm outset #5e79a3;
+  box-shadow: 2px 6px 5px rgb(148, 6, 6);
+  border: 4mm inset rgb(228, 218, 218);
 }
 
 #paper {
   padding: 40px 20px;
-  background-color: #FB6542;
-  box-shadow: 2px 6px 5px #929292;
-  border: 4mm outset #d77863;
+  box-shadow: 2px 6px 5px rgb(2, 129, 104);
+  border: 4mm inset rgb(218, 228, 226);
 }
 
 #scissors {
   padding: 40px 7.5px;
-  background-color: #FFBB00;
-  box-shadow: 2px 6px 5px #929292;
-  border: 4mm outset #ceb160;
+  box-shadow: 2px 6px 5px rgb(160, 100, 8);
+  border: 4mm inset rgb(228, 224, 218);
+}
+
+#reset {
+  font-size: 30px;
+  padding: 30px 20px;
+  color: white;
+  background-color: red;
+  text-shadow: 1px 1px 2px rgb(237, 230, 230),
+    0 0 1em rgb(119, 85, 67),
+    0 0 0.2em rgb(154, 139, 144);
+  border: 3mm outset rgb(248, 85, 85);
+  box-shadow: 2px 6px 5px rgb(226, 119, 119);
 }
 
 #rock:hover,
 #paper:hover,
 #scissors:hover {
   cursor: pointer;
+  background-color: rgba(243, 243, 236, 0.478);
 }
 
-#rock:hover {
-  background-color: #0c3168;
+#reset:hover {
+  cursor: pointer;
+  background-color: rgba(229, 27, 27, 0.964);
 }
 
-#paper:hover {
-  background-color: #5f1a0b;
-}
-
-#scissors:hover {
-  background-color: #654f12;
+#rock:active,
+#paper:active,
+#scissors:active,
+#reset:active {
+  transform: translateY(0.1em);
 }
 
 #rock:active,
 #paper:active,
 #scissors:active {
-  transform: translateY(0.1em);
+  background-color:red;
+  color: white;
+  border: 4mm outset rgb(248, 85, 85);
 }
 
-#rock:active {
-  background-color: #375E97;
-}
-
-#paper:active {
-  background-color: #FB6542;
-}
-
-#scissors:active {
-  background-color: #FFBB00;
+#reset:active {
+  box-shadow: 2px 6px 5px rgb(148, 6, 6);
+  border: 3mm inset rgb(228, 218, 218);
+  background-color: white;
+  color: red;
+  text-shadow: 1px 1px 2px red,
+    0 0 1em rgb(238, 238, 244),
+    0 0 0.2em rgb(249, 231, 237);
 }
