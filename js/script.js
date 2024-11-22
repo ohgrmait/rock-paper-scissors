@@ -23,7 +23,7 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
   let result = "";
   if (humanChoice === computerChoice) {
-    result = "It's a tie!";
+    result = "What a bummer! That's a tie!";
   } else {
     if (humanChoice === "Rock" && computerChoice === "Paper") {
       result = `You lose! ${computerChoice} beats ${humanChoice}.`;
@@ -49,21 +49,30 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const buttons = document.querySelectorAll(".btn");
-
 const result = document.querySelector(".result");
-
 const score = document.querySelector(".score");
-
 const winner = document.querySelector(".winner");
 
 const audio = document.querySelector("#audio");
 const winnerAudio = document.querySelector("#winner-audio");
 const loserAudio = document.querySelector("#loser-audio");
+const resetAudio = document.querySelector("#reset-audio");
 
 let isGameOver = false;
 
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {  
+  button.addEventListener("click", () => {
+    if (button.textContent === 'Reset') {
+      isGameOver = false;
+      resetAudio.play();
+      humanScore = 0;
+      computerScore = 0;
+      result.textContent = '';
+      score.textContent = '';
+      winner.textContent = '';
+      return;
+    }
+
     if (isGameOver) {
       return;
     }
@@ -78,11 +87,11 @@ buttons.forEach((button) => {
     score.textContent = `Score: You: ${humanScore}, Computer: ${computerScore}`;
 
     if (humanScore === 5) {
-      winner.textContent = `Congratulations! You won.`;
+      winner.textContent = `Yahoo! You won.`;
       winnerAudio.play();
       isGameOver = true;
     } else if (computerScore === 5) {
-      winner.textContent = `Boohoo! Computer has won.`;
+      winner.textContent = `Boohoo! Computer won.`;
       loserAudio.play();
       isGameOver = true;
     }
