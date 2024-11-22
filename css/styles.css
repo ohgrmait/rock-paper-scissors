@@ -24,6 +24,7 @@ body {
 
 .title,
 .winner {
+  text-align: center;
   color: red;
   text-shadow: 1px 1px 2px red,
     0 0 1em rgb(238, 238, 244),
@@ -46,6 +47,7 @@ span,
 
 .main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -55,6 +57,7 @@ span,
 .result,
 .score {
   font-size: 50px;
+  text-align: center;
 }
 
 .winner {
