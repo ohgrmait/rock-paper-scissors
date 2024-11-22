@@ -2,8 +2,7 @@
 
 html {
   box-sizing: border-box;
-  /* font-family: Roboto, sans-serif; */
-  font-family: "Oleo Script Swash Caps", "Chango", sans-serif;
+  font-family: "Oleo Script Swash Caps", sans-serif;
 }
 
 *,
