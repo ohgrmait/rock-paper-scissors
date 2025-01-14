@@ -23,6 +23,7 @@ This project shows a browser based implementation of the grade school classic "R
 ## Technologies
 - ***Git***
 - ***CLI***
+- ***CSS***
 - ***HTML***
 - ***GitHub***
 - ***JavaScript***
